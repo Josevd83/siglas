@@ -1,0 +1,8 @@
+metodo: siglas
+parametros_ldap:
+  url: 'ldap://ldap.intra.banavih.gob.ve:389'
+  dc: 'ou=Usuarios,o=BANAVIH,dc=banavih,dc=gob,dc=ve'
+  version: '3'
+asistente:
+  activo: noempty
+  text: ''

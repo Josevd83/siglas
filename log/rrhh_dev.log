@@ -1,0 +1,542 @@
+Oct 10 06:03:48 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /documentos with parameters array (  'module' => 'documentos',  'action' => 'index',)
+Oct 10 06:03:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 06:03:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 06:03:48 symfony [info] {documentosActions} Call "documentosActions->executeIndex()"
+Oct 10 06:03:48 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 10 06:03:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (8)
+Oct 10 06:03:48 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/indexSuccess.php"
+Oct 10 06:03:48 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 10 06:03:48 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 10 06:03:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (290) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (290) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 10 06:03:48 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 10 06:03:48 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 10 06:03:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send content (52663 o)
+Oct 10 06:03:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 10 06:03:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 10 06:03:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 06:03:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 06:03:48 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 10 06:03:48 symfony [info] {documentosActions} Change template to "CURRENT/../lib/reciboPago/reciboPagoForm"
+Oct 10 06:03:48 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/reciboPago/reciboPagoFormSuccess.php"
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send content (3620 o)
+Oct 10 06:03:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 06:03:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 06:03:48 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 10 06:03:48 symfony [info] {documentosActions} Change template to "CURRENT/../lib/constanciaTrabajo/constanciaTrabajoForm"
+Oct 10 06:03:48 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/constanciaTrabajo/constanciaTrabajoFormSuccess.php"
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 06:03:48 symfony [info] {sfWebResponse} Send content (595 o)
+Oct 10 06:06:51 symfony [info] {sfPatternRouting} Match route "rrhh_vacaciones" (/vacaciones.:sf_format) for /vacaciones with parameters array (  'module' => 'vacaciones',  'action' => 'index',  'sf_format' => 'html',)
+Oct 10 06:08:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 06:08:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 06:08:16 symfony [info] {vacacionesActions} Call "vacacionesActions->executeIndex()"
+Oct 10 06:08:16 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 10 06:08:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM (SELECT r.id FROM rrhh.vacaciones r WHERE r.funcionario_id = ? GROUP BY r.id) dctrn_count_query - ()
+Oct 10 06:08:16 symfony [info] {sfPHPView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/indexSuccess.php"
+Oct 10 06:08:16 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_assets.php"
+Oct 10 06:08:16 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_flashes.php"
+Oct 10 06:08:16 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_header.php"
+Oct 10 06:08:16 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list.php"
+Oct 10 06:08:16 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_batch_actions.php"
+Oct 10 06:08:16 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/vacaciones/templates/_list_actions.php"
+Oct 10 06:08:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.modulo AS r__modulo, r.parametros AS r__parametros, r.indexado AS r__indexado, r.status AS r__status, r.id_update AS r__id_update, r.ip_update AS r__ip_update, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM rrhh.configuraciones r WHERE (r.modulo = ?) - (vacaciones)
+Oct 10 06:08:16 symfony [err] {Doctrine_Table_Exception} You must specify the value to findBy
+Oct 10 06:08:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 10 06:08:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 06:57:13 symfony [info] {sfPatternRouting} Match route "rrhh_vacaciones" (/vacaciones.:sf_format) for /vacaciones with parameters array (  'module' => 'vacaciones',  'action' => 'index',  'sf_format' => 'html',)
+Oct 10 06:57:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 06:57:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 06:57:13 symfony [info] {vacacionesActions} Call "vacacionesActions->executeIndex()"
+Oct 10 06:57:14 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 10 06:57:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM (SELECT r.id FROM rrhh.vacaciones r WHERE r.funcionario_id = ? GROUP BY r.id) dctrn_count_query - (290)
+Oct 10 06:57:14 symfony [info] {sfPHPView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/indexSuccess.php"
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_assets.php"
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_flashes.php"
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_header.php"
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list.php"
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_batch_actions.php"
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/vacaciones/templates/_list_actions.php"
+Oct 10 06:57:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.modulo AS r__modulo, r.parametros AS r__parametros, r.indexado AS r__indexado, r.status AS r__status, r.id_update AS r__id_update, r.ip_update AS r__ip_update, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM rrhh.configuraciones r WHERE (r.modulo = ?) - (vacaciones)
+Oct 10 06:57:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.usuario_delega_id AS a__usuario_delega_id, a.usuario_delegado_id AS a__usuario_delegado_id, a.f_expiracion AS a__f_expiracion, a.accion AS a__accion, a.parametros AS a__parametros, a.status AS a__status, a.id_update AS a__id_update, a.ip_update AS a__ip_update, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM acceso.accion_delegada a WHERE (a.usuario_delegado_id = ? AND a.accion = ? AND a.status = ?) - (290, administrar_rrhh, A)
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_footer.php"
+Oct 10 06:57:14 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 10 06:57:14 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 10 06:57:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (290) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (290) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 10 06:57:14 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 10 06:57:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 10 06:57:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 06:57:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 06:57:14 symfony [info] {sfWebResponse} Send content (51941 o)
+Oct 10 06:57:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /documentos with parameters array (  'module' => 'documentos',  'action' => 'index',)
+Oct 10 06:57:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 06:57:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 06:57:18 symfony [info] {documentosActions} Call "documentosActions->executeIndex()"
+Oct 10 06:57:19 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 10 06:57:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (8)
+Oct 10 06:57:19 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/indexSuccess.php"
+Oct 10 06:57:19 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 10 06:57:19 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 10 06:57:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (290) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (290) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 10 06:57:19 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 10 06:57:19 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 10 06:57:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 10 06:57:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 06:57:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 06:57:19 symfony [info] {sfWebResponse} Send content (52663 o)
+Oct 10 06:57:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 10 06:57:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 06:57:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 06:57:19 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 10 06:57:19 symfony [info] {documentosActions} Change template to "CURRENT/../lib/reciboPago/reciboPagoForm"
+Oct 10 06:57:19 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/reciboPago/reciboPagoFormSuccess.php"
+Oct 10 06:57:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 06:57:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 06:57:19 symfony [info] {sfWebResponse} Send content (3620 o)
+Oct 10 06:57:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 10 06:57:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 06:57:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 06:57:20 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 10 06:57:20 symfony [info] {documentosActions} Change template to "CURRENT/../lib/constanciaTrabajo/constanciaTrabajoForm"
+Oct 10 06:57:20 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/constanciaTrabajo/constanciaTrabajoFormSuccess.php"
+Oct 10 06:57:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 06:57:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 06:57:20 symfony [info] {sfWebResponse} Send content (595 o)
+Oct 10 10:33:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /documentos with parameters array (  'module' => 'documentos',  'action' => 'index',)
+Oct 10 10:33:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 10:33:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 10:33:44 symfony [info] {documentosActions} Call "documentosActions->executeIndex()"
+Oct 10 10:33:44 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 10 10:33:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (8)
+Oct 10 10:33:44 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/indexSuccess.php"
+Oct 10 10:33:44 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 10 10:33:44 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 10 10:33:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (290) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (290) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 10 10:33:44 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 10 10:33:44 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 10 10:33:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 10 10:33:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 10:33:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 10:33:44 symfony [info] {sfWebResponse} Send content (52663 o)
+Oct 10 10:33:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 10 10:33:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 10 10:33:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 10:33:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 10:33:45 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 10 10:33:45 symfony [info] {documentosActions} Change template to "CURRENT/../lib/constanciaTrabajo/constanciaTrabajoForm"
+Oct 10 10:33:45 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/constanciaTrabajo/constanciaTrabajoFormSuccess.php"
+Oct 10 10:33:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 10:33:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 10:33:45 symfony [info] {sfWebResponse} Send content (595 o)
+Oct 10 10:33:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 10 10:33:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 10 10:33:45 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 10 10:33:45 symfony [info] {documentosActions} Change template to "CURRENT/../lib/reciboPago/reciboPagoForm"
+Oct 10 10:33:45 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/reciboPago/reciboPagoFormSuccess.php"
+Oct 10 10:33:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 10 10:33:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 10 10:33:45 symfony [info] {sfWebResponse} Send content (3620 o)
+Oct 11 10:38:55 symfony [info] {sfPatternRouting} Match route "rrhh_vacaciones" (/vacaciones.:sf_format) for /vacaciones with parameters array (  'module' => 'vacaciones',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 10:38:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 10:38:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 10:38:56 symfony [info] {vacacionesActions} Call "vacacionesActions->executeIndex()"
+Oct 11 10:38:56 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 11 10:38:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM (SELECT r.id FROM rrhh.vacaciones r WHERE r.funcionario_id = ? GROUP BY r.id) dctrn_count_query - (840)
+Oct 11 10:38:56 symfony [info] {sfPHPView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/indexSuccess.php"
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_assets.php"
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_flashes.php"
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_header.php"
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list.php"
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_batch_actions.php"
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/vacaciones/templates/_list_actions.php"
+Oct 11 10:38:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.modulo AS r__modulo, r.parametros AS r__parametros, r.indexado AS r__indexado, r.status AS r__status, r.id_update AS r__id_update, r.ip_update AS r__ip_update, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM rrhh.configuraciones r WHERE (r.modulo = ?) - (vacaciones)
+Oct 11 10:38:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.usuario_delega_id AS a__usuario_delega_id, a.usuario_delegado_id AS a__usuario_delegado_id, a.f_expiracion AS a__f_expiracion, a.accion AS a__accion, a.parametros AS a__parametros, a.status AS a__status, a.id_update AS a__id_update, a.ip_update AS a__ip_update, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM acceso.accion_delegada a WHERE (a.usuario_delegado_id = ? AND a.accion = ? AND a.status = ?) - (837, administrar_rrhh, A)
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_footer.php"
+Oct 11 10:38:56 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 11 10:38:56 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 11 10:38:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (0) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (0) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 11 10:38:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (840) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (840) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 11 10:38:56 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 11 10:38:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 11 10:38:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 10:38:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 10:38:56 symfony [info] {sfWebResponse} Send content (45598 o)
+Oct 11 10:39:10 symfony [info] {sfPatternRouting} Match route "rrhh_reposos" (/reposos.:sf_format) for /reposos with parameters array (  'module' => 'reposos',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 10:39:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 10:39:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 10:39:11 symfony [info] {repososActions} Call "repososActions->executeIndex()"
+Oct 11 10:39:11 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 11 10:39:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rrhh.reposos r WHERE r.funcionario_id = ? AND r.status NOT IN (?) - (840, E)
+Oct 11 10:39:11 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/reposos/templates/indexSuccess.php"
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_assets.php"
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_flashes.php"
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_list_header.php"
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_list.php"
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_list_batch_actions.php"
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/reposos/templates/_list_actions.php"
+Oct 11 10:39:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.usuario_delega_id AS a__usuario_delega_id, a.usuario_delegado_id AS a__usuario_delegado_id, a.f_expiracion AS a__f_expiracion, a.accion AS a__accion, a.parametros AS a__parametros, a.status AS a__status, a.id_update AS a__id_update, a.ip_update AS a__ip_update, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM acceso.accion_delegada a WHERE (a.usuario_delegado_id = ? AND a.accion = ? AND a.status = ?) - (837, administrar_rrhh, A)
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_list_footer.php"
+Oct 11 10:39:11 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 11 10:39:11 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 11 10:39:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (0) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (0) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 11 10:39:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (840) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (840) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 11 10:39:11 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 11 10:39:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 11 10:39:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 10:39:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 10:39:11 symfony [info] {sfWebResponse} Send content (45632 o)
+Oct 11 10:39:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /reposos/solicitar with parameters array (  'module' => 'reposos',  'action' => 'solicitar',)
+Oct 11 10:39:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 10:39:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 10:39:13 symfony [info] {repososActions} Call "repososActions->executeSolicitar()"
+Oct 11 10:39:13 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/reposos/templates/solicitarSuccess.php"
+Oct 11 10:39:13 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 11 10:39:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.modulo AS r__modulo, r.parametros AS r__parametros, r.indexado AS r__indexado, r.status AS r__status, r.id_update AS r__id_update, r.ip_update AS r__ip_update, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM rrhh.configuraciones r WHERE (r.modulo = ?) - (reposos)
+Oct 11 10:39:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c2.id AS c2__0, c2.unidad_id AS c2__1, c2.descripcion AS c2__2, c.tipo_formato_id AS c__3, c3.nombre AS c3__4 FROM correspondencia.correlativos_formatos c INNER JOIN correspondencia.unidad_correlativo c2 ON c.unidad_correlativo_id = c2.id INNER JOIN correspondencia.tipo_formato c3 ON c.tipo_formato_id = c3.id WHERE (c2.unidad_id = ? AND c3.id = ? AND c3.tipo = ? AND c2.tipo = ? AND c2.status = ?) ORDER BY c3.nombre - (59, 1007, M, E, A)
+Oct 11 10:39:13 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT NEXTVAL('correspondencia.unidad_correlativo_id_seq') - ()
+Oct 11 10:39:13 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO correspondencia.unidad_correlativo (unidad_id, nomenclador, letra, secuencia, status, tipo, id_update, created_at, updated_at, id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (59, Siglas-Letra-Año-Secuencia, (RE), 1, A, E, 837, 2016-10-11 10:39:13, 2016-10-11 10:39:13, 173)
+Oct 11 10:39:13 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT NEXTVAL('correspondencia.correlativos_formatos_id_seq') - ()
+Oct 11 10:39:13 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO correspondencia.correlativos_formatos (unidad_correlativo_id, tipo_formato_id, id_update, created_at, updated_at, id) VALUES (?, ?, ?, ?, ?, ?) - (173, 1007, 837, 2016-10-11 10:39:13, 2016-10-11 10:39:13, 162)
+Oct 11 10:39:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 10:39:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 10:39:13 symfony [info] {sfWebResponse} Send content (2758 o)
+Oct 11 10:39:21 symfony [info] {sfPatternRouting} Match route "rrhh_permisos" (/permisos.:sf_format) for /permisos with parameters array (  'module' => 'permisos',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 10:39:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 10:39:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 10:39:21 symfony [info] {permisosActions} Call "permisosActions->executeIndex()"
+Oct 11 10:39:21 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 11 10:39:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rrhh.permisos r WHERE r.funcionario_id = ? AND r.status NOT IN (?) - (840, E)
+Oct 11 10:39:21 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/permisos/templates/indexSuccess.php"
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_assets.php"
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_flashes.php"
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_header.php"
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list.php"
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_batch_actions.php"
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/permisos/templates/_list_actions.php"
+Oct 11 10:39:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.usuario_delega_id AS a__usuario_delega_id, a.usuario_delegado_id AS a__usuario_delegado_id, a.f_expiracion AS a__f_expiracion, a.accion AS a__accion, a.parametros AS a__parametros, a.status AS a__status, a.id_update AS a__id_update, a.ip_update AS a__ip_update, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM acceso.accion_delegada a WHERE (a.usuario_delegado_id = ? AND a.accion = ? AND a.status = ?) - (837, administrar_rrhh, A)
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_footer.php"
+Oct 11 10:39:21 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 11 10:39:21 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 11 10:39:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (0) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (0) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 11 10:39:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (840) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (840) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 11 10:39:21 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 11 10:39:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 11 10:39:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 10:39:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 10:39:21 symfony [info] {sfWebResponse} Send content (45639 o)
+Oct 11 10:39:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /permisos/solicitar with parameters array (  'module' => 'permisos',  'action' => 'solicitar',)
+Oct 11 10:39:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 10:39:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 10:39:24 symfony [info] {permisosActions} Call "permisosActions->executeSolicitar()"
+Oct 11 10:39:24 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/permisos/templates/solicitarSuccess.php"
+Oct 11 10:39:24 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 11 10:39:24 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.modulo AS r__modulo, r.parametros AS r__parametros, r.indexado AS r__indexado, r.status AS r__status, r.id_update AS r__id_update, r.ip_update AS r__ip_update, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM rrhh.configuraciones r WHERE (r.modulo = ?) - (permisos)
+Oct 11 10:39:24 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c2.id AS c2__0, c2.unidad_id AS c2__1, c2.descripcion AS c2__2, c.tipo_formato_id AS c__3, c3.nombre AS c3__4 FROM correspondencia.correlativos_formatos c INNER JOIN correspondencia.unidad_correlativo c2 ON c.unidad_correlativo_id = c2.id INNER JOIN correspondencia.tipo_formato c3 ON c.tipo_formato_id = c3.id WHERE (c2.unidad_id = ? AND c3.id = ? AND c3.tipo = ? AND c2.tipo = ? AND c2.status = ?) ORDER BY c3.nombre - (59, 1006, M, E, A)
+Oct 11 10:39:24 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT NEXTVAL('correspondencia.unidad_correlativo_id_seq') - ()
+Oct 11 10:39:24 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO correspondencia.unidad_correlativo (unidad_id, nomenclador, letra, secuencia, status, tipo, id_update, created_at, updated_at, id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (59, Siglas-Letra-Año-Secuencia, (PE), 1, A, E, 837, 2016-10-11 10:39:24, 2016-10-11 10:39:24, 174)
+Oct 11 10:39:24 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT NEXTVAL('correspondencia.correlativos_formatos_id_seq') - ()
+Oct 11 10:39:24 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO correspondencia.correlativos_formatos (unidad_correlativo_id, tipo_formato_id, id_update, created_at, updated_at, id) VALUES (?, ?, ?, ?, ?, ?) - (174, 1006, 837, 2016-10-11 10:39:24, 2016-10-11 10:39:24, 163)
+Oct 11 10:39:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 10:39:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 10:39:24 symfony [info] {sfWebResponse} Send content (2774 o)
+Oct 11 10:39:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /documentos with parameters array (  'module' => 'documentos',  'action' => 'index',)
+Oct 11 10:39:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 10:39:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 10:39:33 symfony [info] {documentosActions} Call "documentosActions->executeIndex()"
+Oct 11 10:39:33 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 11 10:39:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (8)
+Oct 11 10:39:33 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/indexSuccess.php"
+Oct 11 10:39:33 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 11 10:39:33 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 11 10:39:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (0) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (0) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 11 10:39:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (840) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (840) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 11 10:39:33 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 11 10:39:33 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 11 10:39:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 11 10:39:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 10:39:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 10:39:33 symfony [info] {sfWebResponse} Send content (46495 o)
+Oct 11 10:39:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 11 10:39:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 11 10:39:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 10:39:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 10:39:34 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 11 10:39:34 symfony [info] {documentosActions} Change template to "CURRENT/../lib/reciboPago/reciboPagoForm"
+Oct 11 10:39:34 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/reciboPago/reciboPagoFormSuccess.php"
+Oct 11 10:39:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 10:39:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 10:39:34 symfony [info] {sfWebResponse} Send content (3620 o)
+Oct 11 10:39:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 10:39:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 10:39:34 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 11 10:39:34 symfony [info] {documentosActions} Change template to "CURRENT/../lib/constanciaTrabajo/constanciaTrabajoForm"
+Oct 11 10:39:34 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/constanciaTrabajo/constanciaTrabajoFormSuccess.php"
+Oct 11 10:39:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 10:39:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 10:39:34 symfony [info] {sfWebResponse} Send content (595 o)
+Oct 18 14:47:37 symfony [info] {sfPatternRouting} Match route "rrhh_vacaciones" (/vacaciones.:sf_format) for /vacaciones with parameters array (  'module' => 'vacaciones',  'action' => 'index',  'sf_format' => 'html',)
+Oct 18 14:47:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 18 14:47:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 18 14:47:37 symfony [info] {vacacionesActions} Call "vacacionesActions->executeIndex()"
+Oct 18 14:47:37 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 18 14:47:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM (SELECT r.id FROM rrhh.vacaciones r WHERE r.funcionario_id = ? GROUP BY r.id) dctrn_count_query - (750)
+Oct 18 14:47:37 symfony [info] {sfPHPView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/indexSuccess.php"
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_assets.php"
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_flashes.php"
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_header.php"
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list.php"
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_batch_actions.php"
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/vacaciones/templates/_list_actions.php"
+Oct 18 14:47:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.modulo AS r__modulo, r.parametros AS r__parametros, r.indexado AS r__indexado, r.status AS r__status, r.id_update AS r__id_update, r.ip_update AS r__ip_update, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM rrhh.configuraciones r WHERE (r.modulo = ?) - (vacaciones)
+Oct 18 14:47:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.usuario_delega_id AS a__usuario_delega_id, a.usuario_delegado_id AS a__usuario_delegado_id, a.f_expiracion AS a__f_expiracion, a.accion AS a__accion, a.parametros AS a__parametros, a.status AS a__status, a.id_update AS a__id_update, a.ip_update AS a__ip_update, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM acceso.accion_delegada a WHERE (a.usuario_delegado_id = ? AND a.accion = ? AND a.status = ?) - (1, administrar_rrhh, A)
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_footer.php"
+Oct 18 14:47:37 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 18 14:47:37 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 18 14:47:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 18 14:47:37 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 18 14:47:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 18 14:47:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 18 14:47:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 18 14:47:37 symfony [info] {sfWebResponse} Send content (51630 o)
+Oct 18 14:47:45 symfony [info] {sfPatternRouting} Match route "rrhh_reposos" (/reposos.:sf_format) for /reposos with parameters array (  'module' => 'reposos',  'action' => 'index',  'sf_format' => 'html',)
+Oct 18 14:47:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 18 14:47:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 18 14:47:45 symfony [info] {repososActions} Call "repososActions->executeIndex()"
+Oct 18 14:47:45 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 18 14:47:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rrhh.reposos r WHERE r.funcionario_id = ? AND r.status NOT IN (?) - (750, E)
+Oct 18 14:47:45 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/reposos/templates/indexSuccess.php"
+Oct 18 14:47:45 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_assets.php"
+Oct 18 14:47:45 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_flashes.php"
+Oct 18 14:47:45 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_list_header.php"
+Oct 18 14:47:45 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_list.php"
+Oct 18 14:47:45 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_list_batch_actions.php"
+Oct 18 14:47:45 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/reposos/templates/_list_actions.php"
+Oct 18 14:47:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.usuario_delega_id AS a__usuario_delega_id, a.usuario_delegado_id AS a__usuario_delegado_id, a.f_expiracion AS a__f_expiracion, a.accion AS a__accion, a.parametros AS a__parametros, a.status AS a__status, a.id_update AS a__id_update, a.ip_update AS a__ip_update, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM acceso.accion_delegada a WHERE (a.usuario_delegado_id = ? AND a.accion = ? AND a.status = ?) - (1, administrar_rrhh, A)
+Oct 18 14:47:46 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoReposos/templates/_list_footer.php"
+Oct 18 14:47:46 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 18 14:47:46 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 18 14:47:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 18 14:47:46 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 18 14:47:46 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 18 14:47:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 18 14:47:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 18 14:47:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 18 14:47:46 symfony [info] {sfWebResponse} Send content (51658 o)
+Oct 18 14:47:48 symfony [info] {sfPatternRouting} Match route "rrhh_permisos" (/permisos.:sf_format) for /permisos with parameters array (  'module' => 'permisos',  'action' => 'index',  'sf_format' => 'html',)
+Oct 18 14:47:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 18 14:47:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 18 14:47:49 symfony [info] {permisosActions} Call "permisosActions->executeIndex()"
+Oct 18 14:47:49 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 18 14:47:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rrhh.permisos r WHERE r.funcionario_id = ? AND r.status NOT IN (?) - (750, E)
+Oct 18 14:47:49 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/permisos/templates/indexSuccess.php"
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_assets.php"
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_flashes.php"
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_header.php"
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list.php"
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_batch_actions.php"
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/permisos/templates/_list_actions.php"
+Oct 18 14:47:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.usuario_delega_id AS a__usuario_delega_id, a.usuario_delegado_id AS a__usuario_delegado_id, a.f_expiracion AS a__f_expiracion, a.accion AS a__accion, a.parametros AS a__parametros, a.status AS a__status, a.id_update AS a__id_update, a.ip_update AS a__ip_update, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM acceso.accion_delegada a WHERE (a.usuario_delegado_id = ? AND a.accion = ? AND a.status = ?) - (1, administrar_rrhh, A)
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_footer.php"
+Oct 18 14:47:49 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 18 14:47:49 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 18 14:47:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 18 14:47:49 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 18 14:47:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 18 14:47:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 18 14:47:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 18 14:47:49 symfony [info] {sfWebResponse} Send content (51667 o)
+Oct 18 14:47:52 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /documentos with parameters array (  'module' => 'documentos',  'action' => 'index',)
+Oct 18 14:47:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 18 14:47:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 18 14:47:52 symfony [info] {documentosActions} Call "documentosActions->executeIndex()"
+Oct 18 14:47:52 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 18 14:47:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (8)
+Oct 18 14:47:52 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/indexSuccess.php"
+Oct 18 14:47:52 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 18 14:47:52 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 18 14:47:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 18 14:47:52 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 18 14:47:52 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 18 14:47:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send content (52352 o)
+Oct 18 14:47:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 18 14:47:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 18 14:47:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 18 14:47:52 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 18 14:47:52 symfony [info] {documentosActions} Change template to "CURRENT/../lib/constanciaTrabajo/constanciaTrabajoForm"
+Oct 18 14:47:52 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/constanciaTrabajo/constanciaTrabajoFormSuccess.php"
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send content (595 o)
+Oct 18 14:47:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 18 14:47:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 18 14:47:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 18 14:47:52 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 18 14:47:52 symfony [info] {documentosActions} Change template to "CURRENT/../lib/reciboPago/reciboPagoForm"
+Oct 18 14:47:52 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/reciboPago/reciboPagoFormSuccess.php"
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 18 14:47:52 symfony [info] {sfWebResponse} Send content (3620 o)
+Oct 27 13:53:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /documentos with parameters array (  'module' => 'documentos',  'action' => 'index',)
+Oct 27 13:53:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 27 13:53:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 27 13:53:32 symfony [info] {documentosActions} Call "documentosActions->executeIndex()"
+Oct 27 13:53:32 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 27 13:53:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (8)
+Oct 27 13:53:32 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/indexSuccess.php"
+Oct 27 13:53:32 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 27 13:53:32 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 27 13:53:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 27 13:53:32 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 27 13:53:32 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 27 13:53:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send content (52721 o)
+Oct 27 13:53:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 27 13:53:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 27 13:53:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 27 13:53:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 27 13:53:32 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 27 13:53:32 symfony [info] {documentosActions} Change template to "CURRENT/../lib/reciboPago/reciboPagoForm"
+Oct 27 13:53:32 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/reciboPago/reciboPagoFormSuccess.php"
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send content (3620 o)
+Oct 27 13:53:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 27 13:53:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 27 13:53:32 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 27 13:53:32 symfony [info] {documentosActions} Change template to "CURRENT/../lib/constanciaTrabajo/constanciaTrabajoForm"
+Oct 27 13:53:32 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/constanciaTrabajo/constanciaTrabajoFormSuccess.php"
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 27 13:53:32 symfony [info] {sfWebResponse} Send content (595 o)
+Oct 28 09:09:21 symfony [info] {sfPatternRouting} Match route "rrhh_vacaciones" (/vacaciones.:sf_format) for /vacaciones with parameters array (  'module' => 'vacaciones',  'action' => 'index',  'sf_format' => 'html',)
+Oct 28 09:09:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 28 09:09:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 28 09:09:22 symfony [info] {vacacionesActions} Call "vacacionesActions->executeIndex()"
+Oct 28 09:09:22 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 28 09:09:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM (SELECT r.id FROM rrhh.vacaciones r WHERE r.funcionario_id = ? GROUP BY r.id) dctrn_count_query - (750)
+Oct 28 09:09:22 symfony [info] {sfPHPView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/indexSuccess.php"
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_assets.php"
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_flashes.php"
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_header.php"
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list.php"
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_batch_actions.php"
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/vacaciones/templates/_list_actions.php"
+Oct 28 09:09:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.modulo AS r__modulo, r.parametros AS r__parametros, r.indexado AS r__indexado, r.status AS r__status, r.id_update AS r__id_update, r.ip_update AS r__ip_update, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM rrhh.configuraciones r WHERE (r.modulo = ?) - (vacaciones)
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoVacaciones/templates/_list_footer.php"
+Oct 28 09:09:22 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 28 09:09:22 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 28 09:09:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 28 09:09:22 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 28 09:09:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 28 09:09:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 28 09:09:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 28 09:09:22 symfony [info] {sfWebResponse} Send content (52164 o)
+Oct 28 09:09:29 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /configuracion with parameters array (  'module' => 'configuracion',  'action' => 'index',)
+Oct 28 09:09:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 28 09:09:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 28 09:09:29 symfony [info] {configuracionActions} Call "configuracionActions->executeIndex()"
+Oct 28 09:09:29 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/configuracion/templates/indexSuccess.php"
+Oct 28 09:09:29 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 28 09:09:29 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 28 09:09:29 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 28 09:09:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 28 09:09:29 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 28 09:09:29 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 28 09:09:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 28 09:09:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 28 09:09:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 28 09:09:29 symfony [info] {sfWebResponse} Send content (50693 o)
+Oct 28 09:09:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /configuracion/opciones with parameters array (  'module' => 'configuracion',  'action' => 'opciones',)
+Oct 28 09:09:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 28 09:09:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 28 09:09:30 symfony [info] {configuracionActions} Call "configuracionActions->executeOpciones()"
+Oct 28 09:09:30 symfony [info] {configuracionActions} Change template to "CURRENT/"
+Oct 28 09:09:30 symfony [err] {sfRenderException} The template "Success.php" does not exist or is unreadable in "".
+Oct 28 09:09:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 28 09:09:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 28 09:09:57 symfony [info] {sfPatternRouting} Match route "rrhh_permisos" (/permisos.:sf_format) for /permisos with parameters array (  'module' => 'permisos',  'action' => 'index',  'sf_format' => 'html',)
+Oct 28 09:09:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 28 09:09:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 28 09:09:58 symfony [info] {permisosActions} Call "permisosActions->executeIndex()"
+Oct 28 09:09:58 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 28 09:09:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rrhh.permisos r WHERE r.funcionario_id = ? AND r.status NOT IN (?) - (750, E)
+Oct 28 09:09:58 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/permisos/templates/indexSuccess.php"
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_assets.php"
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_flashes.php"
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_header.php"
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list.php"
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_batch_actions.php"
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/apps/rrhh/modules/permisos/templates/_list_actions.php"
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/cache/rrhh/dev/modules/autoPermisos/templates/_list_footer.php"
+Oct 28 09:09:58 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 28 09:09:58 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 28 09:09:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 28 09:09:58 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 28 09:09:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 28 09:09:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 28 09:09:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 28 09:09:58 symfony [info] {sfWebResponse} Send content (52185 o)
+Oct 28 09:10:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /permisos/solicitar with parameters array (  'module' => 'permisos',  'action' => 'solicitar',)
+Oct 28 09:10:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 28 09:10:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 28 09:10:00 symfony [info] {permisosActions} Call "permisosActions->executeSolicitar()"
+Oct 28 09:10:00 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/permisos/templates/solicitarSuccess.php"
+Oct 28 09:10:00 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 28 09:10:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.modulo AS r__modulo, r.parametros AS r__parametros, r.indexado AS r__indexado, r.status AS r__status, r.id_update AS r__id_update, r.ip_update AS r__ip_update, r.created_at AS r__created_at, r.updated_at AS r__updated_at FROM rrhh.configuraciones r WHERE (r.modulo = ?) - (permisos)
+Oct 28 09:10:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c2.id AS c2__0, c2.unidad_id AS c2__1, c2.descripcion AS c2__2, c.tipo_formato_id AS c__3, c3.nombre AS c3__4 FROM correspondencia.correlativos_formatos c INNER JOIN correspondencia.unidad_correlativo c2 ON c.unidad_correlativo_id = c2.id INNER JOIN correspondencia.tipo_formato c3 ON c.tipo_formato_id = c3.id WHERE (c2.unidad_id = ? AND c3.id = ? AND c3.tipo = ? AND c2.tipo = ? AND c2.status = ?) ORDER BY c3.nombre - (8, 1006, M, E, A)
+Oct 28 09:10:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.tipo_formato_id AS c__tipo_formato_id, c.unidad_correlativo_id AS c__unidad_correlativo_id, c.id_update AS c__id_update, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM correspondencia.correlativos_formatos c WHERE (c.id = ?) LIMIT 1 - (163)
+Oct 28 09:10:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 28 09:10:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 28 09:10:00 symfony [info] {sfWebResponse} Send content (2774 o)
+Oct 28 09:11:50 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /documentos with parameters array (  'module' => 'documentos',  'action' => 'index',)
+Oct 28 09:11:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 28 09:11:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 28 09:11:50 symfony [info] {documentosActions} Call "documentosActions->executeIndex()"
+Oct 28 09:11:50 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Oct 28 09:11:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (8)
+Oct 28 09:11:50 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/indexSuccess.php"
+Oct 28 09:11:50 symfony [info] {sfPHPView} Decorate content with "/var/www/siglas/web/templates/layout.php"
+Oct 28 09:11:50 symfony [info] {sfPHPView} Render "/var/www/siglas/web/templates/layout.php"
+Oct 28 09:11:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(c.id) AS c__0 FROM correspondencia.correspondencia c WHERE (c.id IN (SELECT c2.correspondencia_id AS c2__correspondencia_id FROM correspondencia.receptor c2 WHERE (c2.funcionario_id IN (750) AND c2.establecido = 'S')) AND (SELECT COUNT(c3.id) AS c3__0 FROM correspondencia.receptor c3 WHERE (c3.correspondencia_id = c.id AND c3.funcionario_id IN (750) AND c3.f_recepcion IS NOT NULL)) < 1 AND c.status = ?) - (E)
+Oct 28 09:11:50 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_chat.php"
+Oct 28 09:11:50 symfony [info] {sfPartialView} Render "/var/www/siglas/web/templates/_sessionTime.php"
+Oct 28 09:11:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT o.id AS o__id, o.id_externo AS o__id_externo, o.codigo_unidad AS o__codigo_unidad, o.padre_id AS o__padre_id, o.unidad_tipo_id AS o__unidad_tipo_id, o.nombre AS o__nombre, o.nombre_reducido AS o__nombre_reducido, o.siglas AS o__siglas, o.adscripcion AS o__adscripcion, o.estado_id AS o__estado_id, o.municipio_id AS o__municipio_id, o.parroquia_id AS o__parroquia_id, o.dir_av_calle_esq AS o__dir_av_calle_esq, o.dir_edf_torre_anexo AS o__dir_edf_torre_anexo, o.dir_piso AS o__dir_piso, o.dir_oficina AS o__dir_oficina, o.dir_urbanizacion AS o__dir_urbanizacion, o.dir_ciudad AS o__dir_ciudad, o.dir_punto_referencia AS o__dir_punto_referencia, o.telf_uno AS o__telf_uno, o.telf_dos AS o__telf_dos, o.f_ingreso AS o__f_ingreso, o.f_retiro AS o__f_retiro, o.motivo_retiro AS o__motivo_retiro, o.orden_automatico AS o__orden_automatico, o.orden_preferencial AS o__orden_preferencial, o.status AS o__status, o.id_update AS o__id_update, o.created_at AS o__created_at, o.updated_at AS o__updated_at FROM organigrama.unidad o WHERE (o.id = ?) LIMIT 1 - (9)
+Oct 28 09:11:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 28 09:11:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 28 09:11:50 symfony [info] {sfWebResponse} Send content (52721 o)
+Oct 28 09:11:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 28 09:11:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /documentos/cargarFormulario with parameters array (  'module' => 'documentos',  'action' => 'cargarFormulario',)
+Oct 28 09:11:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 28 09:11:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 28 09:11:52 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 28 09:11:52 symfony [info] {documentosActions} Change template to "CURRENT/../lib/constanciaTrabajo/constanciaTrabajoForm"
+Oct 28 09:11:52 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/constanciaTrabajo/constanciaTrabajoFormSuccess.php"
+Oct 28 09:11:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 28 09:11:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 28 09:11:52 symfony [info] {sfWebResponse} Send content (595 o)
+Oct 28 09:11:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 28 09:11:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 28 09:11:52 symfony [info] {documentosActions} Call "documentosActions->executeCargarFormulario()"
+Oct 28 09:11:52 symfony [info] {documentosActions} Change template to "CURRENT/../lib/reciboPago/reciboPagoForm"
+Oct 28 09:11:52 symfony [info] {sfPHPView} Render "/var/www/siglas/apps/rrhh/modules/documentos/templates/../lib/reciboPago/reciboPagoFormSuccess.php"
+Oct 28 09:11:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 28 09:11:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 28 09:11:52 symfony [info] {sfWebResponse} Send content (3620 o)

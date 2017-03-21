@@ -1,0 +1,8 @@
+metodo: ldap
+parametros_ldap:
+  url: 'ldap://ldap.banavih.gob.ve/'
+  dc:  'dc=banavih,dc=gob,dc=ve'
+  version: 2.4.11
+asistente:
+  activo: noempty
+  text: ''
