@@ -1,12 +1,12 @@
 <?php if(isset($alerta_visitante)){ ?>
     <?php if($alerta_visitante){ ?>
-    <div style="position: relative; background-color: tomato; color: white;">
+    <div style="position: relative; background-color: tomato; color: white;  overflow: auto;">
         <div style="padding: 15px;"><img src="/images/icon/error48.png"/></div>
-        <div style="position: absolute; left: 80px; top: 0px; padding: 5px; width: 265px;">
+        <div style="position: absolute; left: 80px; top: 0px; padding: 5px; width: 230px;">
             <font class="f25b">Visitante en Alerta</font><br/>
             Motivo: <?php echo $alerta_visitante->getDescripcion(); ?>
         </div>
-        <div style="position: absolute; right: 65px; top: 0px; padding: 5px; width: 265px;">
+        <div style="position: absolute; right: 65px; top: 0px; padding: 5px; width: 250px;">
             <font class="f25b">Alertado por:</font><br/>
             <?php 
             $funcionario_nombre = $alerta_funcionario[0]->getPrimerNombre().' '.$alerta_funcionario[0]->getSegundoNombre().' '.$alerta_funcionario[0]->getPrimerApellido().' '.$alerta_funcionario[0]->getSegundoApellido();

@@ -64,7 +64,7 @@
                     </option>
                 <?php } ?>
             </select>
-            <div id="div_ext_unidad"></div>
+            <!--<div id="div_ext_unidad"></div>-->
         </div>
     </div>
 </div>
