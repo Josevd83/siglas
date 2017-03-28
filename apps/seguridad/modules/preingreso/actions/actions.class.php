@@ -49,7 +49,13 @@ class preingresoActions extends autoPreingresoActions
   
   public function executeFuncionarioRecibe(sfWebRequest $request)
   {
-    $this->funcionarios = Doctrine::getTable('Funcionarios_FuncionarioCargo')->funcionarioDeUnidades(array($request->getParameter('u_id')));
+  	if($request->getParameter('gerencias')!=1)
+    	$this->funcionarios = Doctrine::getTable('Funcionarios_FuncionarioCargo')->funcionarioDeUnidades(array($request->getParameter('u_id')));
+    else{
+    	$tipo_unidad_id = Doctrine::getTable('Organigrama_Unidad')->findOneById($request->getParameter('u_id'))->getUnidadTipoId();
+    	$this->funcionarios = Doctrine::getTable('Funcionarios_FuncionarioCargo')->funcionarioDeGerencias(array($tipo_unidad_id));
+    }
+    
   }
   
   public function executeVisitanteForm(sfWebRequest $request)

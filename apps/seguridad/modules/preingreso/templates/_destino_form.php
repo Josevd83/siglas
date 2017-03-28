@@ -1,5 +1,7 @@
 <?php use_helper('jQuery'); ?>
-<?php $unidades = Doctrine::getTable('Organigrama_Unidad')->combounidad(FALSE,NULL,TRUE); ?>
+<?php //$unidades = Doctrine::getTable('Organigrama_Unidad')->combounidad(FALSE,NULL,TRUE); ?>
+<?php $solo_gerencias = array(2,4,5,1,6,8,12,13,19,24,26,30,34,36,39,41,47,49,50,55,60,62,65,70,71); //ids de la tabla organigrama.unidad donde son las gerencias ?>
+<?php $unidades = Doctrine::getTable('Organigrama_Unidad')->combounidad(FALSE,$solo_gerencias,TRUE); ?>
 
 <div class="sf_admin_form_row sf_admin_foreignkey" id="piso">
     <div>
@@ -41,7 +43,7 @@
                 <?php
                     echo jq_remote_function(array('update' => 'div_funcionario_recibe',
                     'url' => sfConfig::get('sf_app_seguridad_url').'preingreso/funcionarioRecibe',
-                    'with'     => "'u_id=' +this.value",)) ?>">
+                    'with'     => "'u_id=' +this.value+'&gerencias=1'",)) ?>">
 
                     <option value=""></option>
 
@@ -58,7 +60,7 @@
                     </option>
                 <?php } ?>
             </select>
-            <div id="div_ext_unidad"></div>
+            <!--<div id="div_ext_unidad"></div>-->
         </div>
     </div>
 </div>

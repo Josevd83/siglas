@@ -51,7 +51,7 @@
                 <?php
                     echo jq_remote_function(array('update' => 'div_funcionario_recibe',
                     'url' => sfConfig::get('sf_app_seguridad_url').'ingresa/funcionarioRecibe',
-                    'with'     => "'u_id=' +this.value",)) ?>">
+                    'with'     => "'u_id=' +this.value+'&gerencias=1'",)) ?>">
 
                 <?php foreach( $unidades as $clave=>$valor ) { 
                     list($unidad_id, $piso) = explode("&&", $clave);
