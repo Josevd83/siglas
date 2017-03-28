@@ -134,7 +134,9 @@ class ingresaActions extends autoIngresaActions
   
   public function executeFuncionarioRecibe(sfWebRequest $request)
   {
-    $this->funcionarios = Doctrine::getTable('Funcionarios_FuncionarioCargo')->funcionarioDeUnidades(array($request->getParameter('u_id')));
+  	//$this->funcionarios = Doctrine::getTable('Funcionarios_FuncionarioCargo')->funcionarioDeUnidades(array($request->getParameter('u_id')));
+  	$tipo_unidad_id = Doctrine::getTable('Organigrama_Unidad')->findOneById($request->getParameter('u_id'))->getUnidadTipoId();
+    $this->funcionarios = Doctrine::getTable('Funcionarios_FuncionarioCargo')->funcionarioDeGerencias(array($tipo_unidad_id));
   }
   
   public function executeEquiposDePersona(sfWebRequest $request)

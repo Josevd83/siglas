@@ -203,6 +203,24 @@ class Funcionarios_FuncionarioCargoTable extends Doctrine_Table
             return $q->execute();
     }
     
+	public function funcionarioDeGerencias($tipo_unidad_id)
+    {
+            $q = Doctrine_Query::create()
+                ->select('f.*,fc.*, fc.funcionario_id as funcionario_id,c.id as cid, c.padre_id as cargo_supervisor,(CASE WHEN f.sexo=\'M\' THEN ct.masculino WHEN f.sexo=\'F\' THEN ct.femenino END) as ctnombre')
+                ->from('Funcionarios_Funcionario f')
+                ->innerjoin('f.Funcionarios_FuncionarioCargo fc')
+                ->innerjoin('fc.Organigrama_Cargo c')
+                ->innerjoin('c.Organigrama_UnidadFuncional u')
+                ->innerjoin('c.Organigrama_CargoTipo ct')
+                ->innerjoin('c.Organigrama_CargoGrado cg')
+                ->innerjoin('u.Organigrama_UnidadTipo ut')
+                ->where('fc.status = ?', 'A')
+                ->andWhereIn('ut.id', $tipo_unidad_id)
+                ->orderBy('ct.orden, cg.orden, ct.nombre DESC, f.primer_nombre, f.segundo_nombre, f.primer_apellido, f.segundo_apellido');
+
+            return $q->execute();
+    }
+    
     public function funcionarioAutorizadoCorrespondencia($unidad_in_ids,$unidad_autoriza_id)
     {
             $q = Doctrine_Query::create()

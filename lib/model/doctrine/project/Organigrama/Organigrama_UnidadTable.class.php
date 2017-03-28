@@ -116,6 +116,7 @@ class Organigrama_UnidadTable extends Doctrine_Table
 
         //$opciones = array_unique($opciones);
         return $opciones;
+        //var_dump($opciones);die;
     }
 
     public function unidadTipo() // InnerList para table_method no lleva el execute OJO solo retorna el query
