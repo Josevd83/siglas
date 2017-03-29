@@ -31,7 +31,8 @@ generator:
       filter:
         class: false
       form:    ~
-      edit:    ~
+      edit:
+        title: Editar Preingreso
       new:
         title: Nuevo preingreso
         display:

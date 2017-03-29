@@ -39,4 +39,9 @@ class Funcionarios_Funcionario extends BaseFuncionarios_Funcionario
         $cacheDriver = $this->getTable()->getAttribute(Doctrine_Core::ATTR_RESULT_CACHE);
         $cacheDriver->delete('cache_funcionario_activo');
     }
+    
+public function getFullName()
+   {
+   	return "{$this->getPrimerNombre()} {$this->getPrimerApellido()}";
+   }
 }

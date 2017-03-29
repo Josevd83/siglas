@@ -17,7 +17,7 @@ abstract class BaseSeguridad_PreingresoForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'                       => new sfWidgetFormInputHidden(),
       'unidad_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Organigrama_Unidad'), 'add_empty' => false)),
-      'funcionario_id'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Funcionarios_Funcionario'), 'add_empty' => true)),
+      'funcionario_id'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Funcionarios_Funcionario'),'method'=>'getFullName', 'add_empty' => true)),
       'f_ingreso_posible_inicio' => new sfWidgetFormDateTime(),
       'f_ingreso_posible_final'  => new sfWidgetFormDateTime(),
       'motivo_id'                => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Seguridad_Motivo'), 'add_empty' => false)),
