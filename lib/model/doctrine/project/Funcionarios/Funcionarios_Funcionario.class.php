@@ -40,8 +40,8 @@ class Funcionarios_Funcionario extends BaseFuncionarios_Funcionario
         $cacheDriver->delete('cache_funcionario_activo');
     }
     
-public function getFullName()
+	public function getFullName()
    {
-   	return "{$this->getPrimerNombre()} {$this->getPrimerApellido()}";
+   		return "{$this->getPrimerNombre()} {$this->getPrimerApellido()}";
    }
 }
